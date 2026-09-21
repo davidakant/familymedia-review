@@ -1,0 +1,10 @@
+# Netlify reads this file and sends these headers with every page.
+# The Content-Security-Policy is the review build's promise that nothing of
+# his leaves his machine, enforced by the browser (CLAUDE.md §15). It is also
+# written into index.html by vite.config.js, so it holds without this file.
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; media-src 'self' blob:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  Referrer-Policy: no-referrer
+  X-Content-Type-Options: nosniff
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
